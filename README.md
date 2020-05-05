@@ -31,7 +31,7 @@ This article is not for seasoned haskellers with a strong opinion and not for th
 
 # Essay: My Long Path To Real World Haskell
 
-My professional path started from C++. It was a beautiful time. I was young, C++ was simple, the future seemed to be bright. I felt like I was on the crest of the wave with the most useful and powerful language out there. I was a wizard of C++, I could create any possible application with it, and I thought there was nothing I could learn because I knew everything.
+My professional path started with C++. It was a beautiful time. I was young, C++ was simple, the future seemed to be bright. I felt like I was on the crest of the wave with the most useful and powerful language out there. I was a wizard of C++, I could create any possible application with it, and I thought there was nothing I could learn because I knew everything.
 
 And then Haskell has come.
 
