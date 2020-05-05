@@ -391,7 +391,7 @@ step executed.
 Bye-bye
 ```
 
-The Hydra framework has a bit more complex hierarchical structure than the HFM language in this article. In it, there are several layers of Free monadic languages:
+The Hydra framework has a bit more complex hierarchical structure than the HFM language in this article. There are several layers of Free monadic languages:
 
 `AppL` <- `LangL` <- `various core effects`
 
