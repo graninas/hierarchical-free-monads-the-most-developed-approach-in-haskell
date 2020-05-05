@@ -165,7 +165,7 @@ runLogger :: Logger a -> IO a
 runLogger = foldFree interpretLoggerF
 ```
 
-For an easier usage, it's better to define a convenient interface for the `App` language. You can done this with several smart constructors:
+For an easier usage, it's better to define a convenient interface for the `App` language. You can do this with several smart constructors:
 
 ```haskell
 -- Log message with Info level.
