@@ -1,5 +1,5 @@
 # Hierarchical Free Monads: The Most Developed Approach In Haskell
-_**(And The Death Of Final Tagless)**_
+# _**(And The Death Of Final Tagless)**_
 
 ### Abstract
 
