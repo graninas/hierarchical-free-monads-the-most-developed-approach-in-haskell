@@ -256,9 +256,9 @@ There are even more reasons why FT violates core design principles. It also does
 
 ### Composition And Explicit Effects
 
-Another point of FT proponents is about composability. "FT enables simple composition of effects. Such a cool idea - composing the effects! And what about HFM? It forces you to update the framework once some new effect becomes needed. Is this even viable? Whether the composition is the essence of Functional Programming and you just threw it to the trash?"
+_"FT enables simple composition of effects. Such a cool idea - composing the effects! And what about HFM? It forces you to update the framework once some new effect becomes needed. Is this even viable? Whether the composition is the essence of Functional Programming and you just threw it to the trash?"_
 
-Actually, there is no value in composition itself. As well as there is no value in lambdas, high order functions, types, type classes and other features of the language. We're here not to admire the language. We're here to solve real problems and achieve business goals, and we should be very careful in choosing the tools.
+Another point of FT proponents is about composability. However there is no value in composition itself. As well as there is no value in lambdas, high order functions, types, type classes and other features of the language. We're here not to admire the language. We're here to solve real problems and achieve business goals, and we should be very careful in choosing the tools.
 
 There is no value composing effects. There is value in controlling effects. Specifications in the FT are very like when you place a mark `BUG: fix me!` near a bug. Do you really control it? Nope. The bug is still there. Explicit lists of effects is just a needless dancing around a landing strip in order to summon the complete correctness.
 
