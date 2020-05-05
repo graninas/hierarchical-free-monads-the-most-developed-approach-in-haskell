@@ -12,7 +12,7 @@ This article is not for seasoned haskellers with a strong opinion and not for th
 ### Table of Contents
 
 * [Essay: My Long Path To Real World Haskell](#Essay-My-Long-Path-To-Real-World-Haskell)
-* [Phylosophy: The State Of Software Design In Haskell](#Phylosophy-The-State-Of-Software-Design-In-Haskell)
+* [Philosophy: The State Of Software Design In Haskell](#Philosophy-The-State-Of-Software-Design-In-Haskell)
 * [Exposition: Hierarchical Free Monads For Real World](#Exposition-Hierarchical-Free-Monads-For-Real-World)
 * [Dive-in: Hierarchical Free Monads](#Dive-in-Hierarchical-Free-Monads)
   - [Nesting Free Monadic Languages](#Nesting-Free-Monadic-Languages)
@@ -51,7 +51,7 @@ This was my biggest mistake.
 
 Unfortunately, this delayed my Haskell career for several years. When I realized my mistake I began working secretly on my hobby projects in Haskell. I was unsure but it started looking like I do need the approaches to build real software in Haskell. I do need to make it testable, and the property based testing does not satisfy all my needs. I do want to make my code highly decoupled, and I do want to make it layered, with all the details hidden behind some interfaces. I really need a way to do Inversion of Control and Dependency Injection in Haskell. Am I asking too much?
 
-It became clear to me that there was the Boötes Void, The Great Nothing, the knowingly unlearnt lesson in the Haskell world. A terra incognita the community was ignoring completely. I'm not sure if it was a willful blindness or just a high focus on the more interesting academic stuff, but there was a stone, there was a mountain, and there was no person who could call himself Sisyfus.
+It became clear to me that there was the Boötes Void, The Great Nothing, the knowingly unlearnt lesson in the Haskell world. A terra incognita the community was ignoring completely. I'm not sure if it was a willful blindness or just a high focus on the more interesting academic stuff, but there was a stone, there was a mountain, and there was no person who could call himself Sisyphus.
 
 And I rolled up my sleeves. It was 2015 when I started my research of Software Engineering in Haskell, and in 2016 I wrote the first line for my future book ["Functional Design and Architecture"](https://graninas.com/functional-design-and-architecture-book/). A long path of reinventing engineery things in the FP setting was waiting for me ahead... To be honest, this wasn't an easy path because I placed myself into the opposition to the main dogmas of the community. It's not only the idea of having practices, patterns, methodologies and approaches was ["too simple"](https://www.simplehaskell.org/), ["juniorish"](https://www.parsonsmatt.org/2019/12/26/write_junior_code.html) and ["boring"](https://www.snoyman.com/blog/2019/11/boring-haskell-manifesto), but the very tool I found to achieve this - Free monads - has been already diminished and dogmated. I had to fight with the myths spread by influential articles from respected folks. But it was pure luck for me because I managed to see what all others couldn't.
 
@@ -59,19 +59,19 @@ This is how I developed a methodology I call FDD, "Functional Declarative Design
 
 And today I can say: Hierarchical Free Monads is the most developed, documented and rewarding approach in Haskell nowadays.
 
-# Phylosophy: The State Of Software Design In Haskell
+# Philosophy: The State Of Software Design In Haskell
 
-You might have heard that the biggest thing haskellers value is Math: Category Theory, Abstract Algebra, Labmda Calculus, advanced type systems. You might have even heard the opinion that mainstream developers just aren't proficient in Math and this is why they have "Software Engineering" which is no more than just a rough substitution of it. Like, in Haskell we don't need "Software Engineering", it's inapplicable, dirty and unwanted. So why should we put our effort into methodologies and other mind flaws the outside industry has?
+You might have heard that the biggest thing haskellers value is Math: Category Theory, Abstract Algebra, Lambda Calculus, advanced type systems. You might have even heard the opinion that mainstream developers just aren't proficient in Math and this is why they have "Software Engineering" which is no more than just a rough substitution of it. Like, in Haskell we don't need "Software Engineering", it's inapplicable, dirty and unwanted. So why should we put our effort into methodologies and other mind flaws the outside industry has?
 
 And I'm not exaggerating. Haskellers consider their language as something special, unique, blessed and therefore standing out of those strange agreements the outer world managed to build. This is clearly not true. Although Haskell is kinda a unique language (what language is not?), it's no way different in the design space. Software Design is about how to create a working software with low risks. How to make it reliable, maintainable, satisfying requirements. And certainly, how to achieve industry's main goals: a ready product that solves real problems and can produce money. Software Engineering helps the industry to not invent things again and again, to not start from scratch, to not spend more time for curiosity than it's actually needed. There should be several well established ways to do all the usual things: web apps, backends, frontends, command line apps, machine learning apps. This makes the development much cheaper and allows for less proficient developers who can be unfamiliar with all the high-level concepts but still will be able to solve business problems.
 
-In this regard, Haskell was lacking high-level approaches and ideas composed into a complete methodology of Software Design. At least until recent years. Yes, sure, we have the mtl approach for a decade or so. We also call it Final Tagles, and it's the most popular approach to write code... But from the design point of view, it doesn't really satisfy the requirements the industry has. For example, its testability is very low, and its complexity is very high, especially if we're trying to incorporate some advanced library with massive type level tricks involved. The problem with mtl/FT is not in its idea but in how it's done. It doesn't allow you to separate layers completely, it forces you to use advanced type level features (like type classes, type equality, type families), and doesn't provide any good way to express the semantics other than just "immediate evaluation". It has many other flaws, and it's a leaky abstraction. I wouldn't recommend using FT for big codebases.
+In this regard, Haskell was lacking high-level approaches and ideas composed into a complete methodology of Software Design. At least until recent years. Yes, sure, we have the mtl approach for a decade or so. We also call it Final Tagless, and it's the most popular approach to write code... But from the design point of view, it doesn't really satisfy the requirements the industry has. For example, its testability is very low, and its complexity is very high, especially if we're trying to incorporate some advanced library with massive type level tricks involved. The problem with mtl/FT is not in its idea but in how it's done. It doesn't allow you to separate layers completely, it forces you to use advanced type level features (like type classes, type equality, type families), and doesn't provide any good way to express the semantics other than just "immediate evaluation". It has many other flaws, and it's a leaky abstraction. I wouldn't recommend using FT for big codebases.
 
 Maybe, dissatisfaction by Final Tagless was the main reason why different effect systems were born. Haskellers were searching for a way to describe effects in a more explicit and more algebraic way, so they started putting effects into lists of types and then interpret this list somehow. Roughly, this is how all the extensible effects work. However, it turns out that working with such a code is no pleasure, and the bigger your codebase, the more boilerplate you have to deal with. Explicit lists of effects are maybe very granular, but this is no way an advantage because it doesn't bring any extra safety but represents a major obstacle to refactoring. This approach is unmerciful. If you made a mistake in your list of effects, or you forgot some effect, you'll end up with a huge unreadable compile error about something completely unrelated. Something about type level magic rather than about your business logic. Effect systems bring too much accidental complexity in the code; perhaps this was a reason why PureScript developers removed a similar system from the language. It turned out that [effect tracking is commercially worthless](https://degoes.net/articles/no-effect-tracking).
 
 Effect systems may look cool and interesting on the first sight. Complete correctness! Explicit declarations of effects! Mathematical foundations! Smart type level magic to play with!.. But Software Engineering is not about cool things, and we should not follow the Cool Thing Driven Development methodology if we want to keep the risks low. To our benefit, different other approaches have been discovered and investigated, and the whole idea of Software Engineering in Haskell became more respected.
 
-You might ask, what else you can use for software design in Haskell if not Final Tagles or effect systems? Well, there are different approaches out there:
+You might ask, what else you can use for software design in Haskell if not Final Tagless or effect systems? Well, there are different approaches out there:
 
 * Final Tagless (FT) / mtl
 * Effect Systems and Freer Monads
@@ -97,7 +97,7 @@ So what is the approach I call "Hierarchical Free Monads" and how it's different
 I created several real world technologies using Hierarchical Free Monads, and tested all this stuff in production. Checkout these projects:
 
 - [PureScript Presto](https://github.com/juspay/purescript-presto) - a framework for building mobile apps using a handy eDSL.
-- [PureScript Presto.Backend](https://github.com/juspay/purescript-presto-backend) - a framework for web RESTful backends. It has the same design as Presto but also is empowered by some additional features like logging, HTTP APIs integration, KV DB and SQL DB subsystems, state handling, [automatic whitebox testing](https://github.com/graninas/automatic-whitebox-testing-showcase), and other useful stuff.
+- [PureScript Presto.Backend](https://github.com/juspay/purescript-presto-backend) - a framework for web RESTful backends. It has the same design as Presto but also is empowered by some additional features like logging, HTTP APIs integration, KV DB, SQL DB subsystems, state handling, [automatic whitebox testing](https://github.com/graninas/automatic-whitebox-testing-showcase), and other useful stuff.
 
 Both of these frameworks drive the business of an Indian financial company [Juspay](juspay.in). Its mobile apps and financial backends are written on top of Presto and Presto.Backend. This technology helped the company to grow up and enabled a wide adoption of PureScript and Haskell in the future. Essentially, Juspay was the first company I used my ideas in. We found that Hierarchical Free Monads hide all the complexity of implementation details behind convenient interfaces so that the code is understandable by not only developers but by managers as well. This helped us to easily reason about the domain, the logic, the business goals and requirements. My approach also brought confidence that Haskell and PureScript are not only academic languages.
 
@@ -507,7 +507,7 @@ runLang :: Lang a -> IO a
 runLang = foldFree interpretLangF
 ```
 
-If the nested scenario throws an exception, the latter will be catched here. It can be an exception produced with the `throwException` method, or an exception made by the standard `error` function, or even an exception coming from the interpreters of other subsystems. For example, the following code is trying to connect to a DB. It will be safe irrespective whether the implementation of the `runIO` method catches the exceptions or not:
+If the nested scenario throws an exception, the latter will be caught here. It can be an exception produced with the `throwException` method, or an exception made by the standard `error` function, or even an exception coming from the interpreters of other subsystems. For example, the following code is trying to connect to a DB. It will be safe irrespective whether the implementation of the `runIO` method catches the exceptions or not:
 
 ```haskell
 unsafeIOScenario :: Lang ()
@@ -678,7 +678,7 @@ Now you see how it's easy to substitute systems by mocking interpreters; even th
 
 `runSafely :: Lang a -> Lang (Either Text a)`
 
-How would we do this when every occurence of this method can have its own type and we literally can't place all the mocks into a single structure? Well, there is nothing bad in passing those mocks as GHC.Any's:
+How would we do this when every occurrence of this method can have its own type and we literally can't place all the mocks into a single structure? Well, there is nothing bad in passing those mocks as GHC.Any's:
 
 ```haskell
 newtype RunSafelyMocks = RunSafelyMocks
@@ -692,7 +692,7 @@ interpretAppF' mocks (RunSafely _ next)   = do
   writeIORef (curVal mocks) (idx + 1)
   let any = (vals mocks) !! idx
   
-  let val = unsafeCoerce any     -- turning an untyped mock into a propriate type from GHC.Any
+  let val = unsafeCoerce any     -- turning an untyped mock into an appropriate type from GHC.Any
   pure $ next val
 ```
 
@@ -726,7 +726,7 @@ I recommend you to read my article for more info about this approach. It's close
 
 ### Performance
 
-_**"Stop it. Stop spreading Free Monads. Don't bash our anti-Free-Monad-FUD. Nothing of these benefits outweights the fact that Free Monads are essentially slow. Very slow, extremely slow. Quadratic complexity of binding? How could this have been even considered?"**_
+_**"Stop it. Stop spreading Free Monads. Don't bash our anti-Free-Monad-FUD. Nothing of these benefits outweighs the fact that Free Monads are essentially slow. Very slow, extremely slow. Quadratic complexity of binding? How could this have been even considered?"**_
 
 Performance. The last resort argument of all developers who are not open minded enough to see the truth. This argument is no more than a defensive position because it implies that all the cases require the best possible performance right here, right now. Developers like to argue about the absolute need of performance, but once they finish arguing, they return to work and continue writing the slow code.
 
@@ -770,7 +770,7 @@ scenario ops appRt = do
   print val
 ```
 
-Here, the Church Encoded Free Monad engine is a bit slower than Final Tagles, but don't mind the difference, - it starts to be significant from 1 million of operations. Are you sure your scenarios will be that long? This table says you can even use a normal Free Monad with monadic chains containing up to 10K actions. (If you're still unsure, try to measure performance yourself using the possibilities the Hydra framework provides).
+Here, the Church Encoded Free Monad engine is a bit slower than Final Tagless, but don't mind the difference, - it starts to be significant from 1 million of operations. Are you sure your scenarios will be that long? This table says you can even use a normal Free Monad with monadic chains containing up to 10K actions. (If you're still unsure, try to measure performance yourself using the possibilities the Hydra framework provides).
 
 # Conclusion
 
@@ -803,7 +803,7 @@ But the industry is not interested in advanced Math concepts, it's not intereste
 
 Hire me to know more, support my book on Patreon, subscribe to me in Twitter, ask questions.
 * Patreon program: ["Functional Design And Architecture"](https://www.patreon.com/functional_design_and_architecture)
-* [My consultanciy work](https://graninas.com/cv-contacts/)
+* [My consultancy work](https://graninas.com/cv-contacts/)
 * GitHub: [graninas](https://github.com/graninas)
 * Twitter: [@graninas](https://twitter.com/graninas)
 * [LinkedIn](https://www.linkedin.com/in/alexander-granin-46889236/)
