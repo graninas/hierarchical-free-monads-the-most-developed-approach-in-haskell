@@ -700,7 +700,7 @@ Here, we used a kind of "dirty hack" to store mocks of different types in the sa
 
 But you might say this is not that impressive because you can do the same with FT. True. However the fact that Free Monadic languages and interpreters are just values helps to keep the code simple, finely separated and decoupled. You can easily build a design in which you will be able to substitute any subsystem by providing another implementation (interpreter). You can even do Dependency Injection on the fly, - in contrast to Final Tagless. Free Monads do not add any extra complexity into this.
 
-Still not convincing? Then I have a killer feature, ace up my sleeve. I call it ["Automatic White-Box Testing Approach"](https://github.com/graninas/automatic-whitebox-testing-showcase).
+Still not convinced? Then I have a killer feature, ace up my sleeve. I call it ["Automatic White-Box Testing Approach"](https://github.com/graninas/automatic-whitebox-testing-showcase).
 
 What is this? It's a way to record your Free Monadic scenario, its steps and effects, into a single list of entries. Why? Because you can replay this recording against your scenario, and the player will immediately spot what parts of the scenario have changed. Does it sound like magic? Consider the following recording you could obtain from a simple scenario:
 
