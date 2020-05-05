@@ -45,7 +45,7 @@ I was learning Haskell, I was advancing towards the steep curve of new concepts,
 
 To that moment, I've built a strong experience in Software Engineering with OOP languages, such as C++ and C#, I've learned the need of the software design principles, I had a nice understanding of how to create testable software, and even all those patterns and approaches could lead me to the final goal of real world development: a software that solves the business' problems.
 
-But it seemed haskellers weren't interested in things like this. Haskellers looked more intelligent and smart than me because they were able to juggle crazy types, categories, lemmas and coyonedas, and they did everything to get me thinking I'm too amateurish here. Like I don't need to care about that ugly mainstream nonsense anymore. What I actually need is to learn this new world of superior concepts just to have a chance to get into Heaven. I believed them, - if I'd only had a choice!
+But it seemed haskellers weren't interested in things like this. Haskellers looked more intelligent and more smart than me because they were able to juggle crazy types, categories, lemmas and coyonedas, and they did everything to get me thinking I'm too amateurish here. Like I don't need to care about that ugly mainstream nonsense anymore. What I actually need is to learn this new world of superior concepts just to have a chance to get into Heaven. I believed them, - if I'd only had a choice!
 
 This was my biggest mistake.
 
