@@ -336,7 +336,7 @@ runSQLiteQuery :: String -> Lang (Either Error SQLite.Rows)
 runSQLiteQuery query = runIO $ SQLite.runQuery query
 ```
 
-True that this method is somewhat dangerous, but it's still under control. You can disable it by a config for your framework, you can add a trace message into the interpreter of it, you can even handle exceptions from the `ioAct`.
+True that this method is somewhat dangerous, but it's still under control. You can disable it by a config for your framework, you can add a trace message into the interpreter, you can even handle exceptions from the `ioAct`.
 
 ```haskell
 interpretAppF :: AppF a -> IO a
