@@ -327,7 +327,7 @@ runIO :: IO a -> Lang a
 runIO ioAct = liftF $ RunIO ioAct id
 ```
 
-Now you can implement some additional subsystem via it:
+Now you can implement some additional subsystem using this method:
 
 ```haskell
 import qualified SQLite as SQLite
