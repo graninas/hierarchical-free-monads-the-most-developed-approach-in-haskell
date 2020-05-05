@@ -738,7 +738,7 @@ Fortunately, the myth about slow Free Monads is just a myth. Let me state severa
 * In HFM, scenarios are never a single flow of actions. Due to the hierarchical structure of a HFM framework, scenarios are more like trees of separate Free Monadic chains. This means these scenarios have own counter on how many operations in them. This smoothes the binding problem, if any.
 * Even normal Free Monads can be used for short scenarios.
 
-When we deal with software solving real problems, performance shouldn't be an object for theoretical reasoning. Theorethizing can't provide you the actual picture on how your code behaves. Abstract performance that is unrelated to a specific task, to a specific code, doesn't make any sense. The only measurement of truth here is the experiment. I knew this and I did some experiments for you in my Hydra framework. The following table shows comparison of the for approaches four a simple scenario:
+When we deal with software solving real problems, performance shouldn't be an object for theoretical reasoning. Theorethizing can't provide you the actual picture on how your code behaves. Abstract performance that is unrelated to a specific task, to a specific code, doesn't make any sense. The only measurement of truth here is the experiment. I knew this and I did some experiments for you in my Hydra framework. The following table shows comparison of the four approaches for a simple scenario:
 
 |Ops cnt  | FT    | FreeM | ChurchM | IO
 ----------| ------|-------|---------|--------
