@@ -289,7 +289,7 @@ printFactAndFib = do
   printRandomFibonacci
 ```
 
-Let's try to see how this will look with the `AppM` approach (pseudocode; full description see [here](https://serokell.io/blog/tagless-final) article):
+Let's try to see how this will look with the `AppM` approach (pseudocode; see full description [here](https://serokell.io/blog/tagless-final)):
 
 ```haskell
 newtype AppM a = AppM { runAppM :: ReaderT Env IO a }
