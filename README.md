@@ -730,7 +730,7 @@ _**"Stop it. Stop spreading Free Monads. Don't bash our anti-Free-Monad-FUD. Not
 
 Performance. The last resort argument of all developers who are not open minded enough to see the truth. This argument is no more than a defensive position because it implies that all the cases require the best possible performance right here, right now. Developers like to argue about the absolute need of performance, but once they finish arguing, they return to work and continue writing the slow code.
 
-Fortunately, the myth about slow Free Monads is just a myth. A half true. Let me state several things:
+Fortunately, the myth about slow Free Monads is just a myth. Let me state several things:
 * Normal Free Monads (the `Free` type from [here](http://hackage.haskell.org/package/free-5.1.3/docs/Control-Monad-Free.html)) are indeed slow. They have O(n^2) binding of monadic chains.
 * Church Encoded Free Monads (the `F` type from [here](http://hackage.haskell.org/package/free-5.1.3/docs/Control-Monad-Free-Church.html)) are as fast as Final Tagless.
 * There are even more different Free Monads out there. For example, in PureScript, a Free Monad from the ["Reflection with No Remorse"](http://okmij.org/ftp/Haskell/zseq.pdf) paper has been implemented. This Free Monad is also fast enough to be used in production.
