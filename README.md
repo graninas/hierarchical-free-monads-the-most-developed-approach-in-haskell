@@ -605,7 +605,7 @@ Some of the runtime values drive the framework and do not appear in the business
 
 All these and several other techniques the HFM approach provides help to manage resources easily, without adding any extra accidental complexity into the business logic code. This is drastically important for big code bases within the industrial setting.
 
-Now let me ask you a philosophical question. Why do all the articles about Free Monads say that handling exceptions and managing resources is not possible or quite limited compared to FT? The cause maybe is that a theoretical reasoning about Free Monads as a Math object has nothing to do with an engineery way of solving problems. Sometimes hacky, sometimes dirty, - enginery solutions help us to achieve business' goals, and we don't really need to chase a complete Math-like correctness all the time.
+Now let me ask you a philosophical question. Why do all the articles about Free Monads say that handling exceptions and managing resources is not possible or quite limited compared to FT? The cause maybe is that a theoretical reasoning about Free Monads as a Math object has nothing to do with an engineery way of solving problems. Sometimes hacky, sometimes dirty, - engineery solutions help us to achieve business' goals, and we don't really need to chase a complete Math-like correctness all the time.
 
 ### Testability
 
