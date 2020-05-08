@@ -728,7 +728,7 @@ I recommend you to read my article for more info about this approach. It's close
 
 _**"Stop it. Stop spreading Free Monads. Don't bash our anti-Free-Monad-FUD. Nothing of these benefits outweighs the fact that Free Monads are essentially slow. Very slow, extremely slow. Quadratic complexity of binding? How could this have been even considered?"**_
 
-Performance. The last resort argument of all developers who are not open minded enough to see the truth. This argument is no more than a defensive position because it implies that all the cases require the best possible performance right here, right now. Developers like to argue about the absolute need of performance, but once they finish arguing, they return to work and continue writing the slow code.
+Performance. The last resort argument of all developers who has a focus on the details rather than on the big picture. This argument usually implies that all the cases require the best possible performance right here, right now. Developers like to argue about the absolute need of performance, but once they finish arguing, they return to work and continue writing the slow code.
 
 Fortunately, the myth about slow Free Monads is just a myth. Let me state several things:
 * Normal Free Monads (the `Free` type from [here](http://hackage.haskell.org/package/free-5.1.3/docs/Control-Monad-Free.html)) are indeed slow. They have O(n^2) binding of monadic chains.
