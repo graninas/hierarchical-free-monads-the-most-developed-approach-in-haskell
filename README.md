@@ -3,7 +3,7 @@
 
 ### Abstract
 
-This article is for those who are searching for approaches in Haskell to create real software. The article describes the approach known as Hierarchical Free Monads (HFM) and shows why it's better than other approaches. It also provides a technical perspective on HFM in comparison to Final Tagless / mtl and demonstrates how to solve typical tasks with it. Additionally, the article debunks several widespread myths about Free Monads.
+This article is for those who are searching for approaches in Haskell to create real software. The article describes the approach known as Hierarchical Free Monads (HFM), shows why it's better than other approaches, and how the approach has been used to drive several buisnesses. The article also provides a technical perspective on HFM in comparison to Final Tagless / mtl and demonstrates how to solve typical tasks with it. Additionally, the article debunks several widespread myths about Free Monads.
 
 There are also philosophical digressions in which I'm trying to explain why Haskell is not yet as popular as it can be, and why we need all that knowledge known as "Software Engineering" to make it more spread.
 
