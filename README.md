@@ -579,7 +579,7 @@ langBracket acq rel act = do
   pure a
 ```
 
-The code presented above isn't exactly like the `bracket` function and it's not completely safe in the event of a presence of `throwException` and `runSafely` methods. But with using these functions it's for sure possible to express all the resource handling combinators from the [Control.Exception](https://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Exception.html) module.
+The code of `langBracket` isn't exactly like the `bracket` function and it's not completely safe in the event of a presence of `throwException` and `runSafely` methods. But with using these functions it's for sure possible to express all the resource handling combinators from the [Control.Exception](https://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Exception.html) module.
 
 One more interesting aspect of resource handling with Free Monads is closely corresponding to how we do it in the mainstream languages. The architecture based on Free Monads is divided into three layers: business logic, interface eDSLs and implementation. The latter layer includes not only interpreters but also runtime structures, resources and data hidden from the two other layers. Free Monadic scenarios should be run on top of this runtime, and it's possible to track different resources there. For example, the Hydra framework has the following runtime structure for keeping DB connections, threads, raw variables and other resources:
 
