@@ -640,7 +640,7 @@ It's certainly possible to build additional mechanisms for mocking and more or l
 Let's investigate a short sample on how to organize a small mocking framework for the `App` language. To mock `GetRandomInt` calls, we will need a container (let it be list), and a special mocking interpreter will use these values during the interpretation instead of evaluating the actual effect:
 
 ```haskell
-newtype RandomValueMocks = RandomValueMocks
+data RandomValueMocks = RandomValueMocks
   { curVal :: IORef Int
   , vals :: [Int]
   }
@@ -681,7 +681,7 @@ Now you see how it's easy to substitute systems by mocking interpreters; even th
 How would we do this when every occurrence of this method can have its own type and we literally can't place all the mocks into a single structure? Well, there is nothing bad in passing those mocks as GHC.Any's:
 
 ```haskell
-newtype RunSafelyMocks = RunSafelyMocks
+data RunSafelyMocks = RunSafelyMocks
   { curVal :: IORef Int
   , vals :: [GHC.Any]
   }
