@@ -802,7 +802,7 @@ The long history of programming languages shows that a language can't really sur
 But the industry is not interested in advanced Math concepts, it's not interested in cool smart things, it doesn't value curiosity as haskellers do. The only thing the industry considers important is can it have its goals achieved or not and by what cost. Unfortunately, achieving the industry's goals is where the Haskell community has a big problem. We all need to learn from the mainstream, we need to adopt methodologies, ideas and practices to show the industry that Haskell is not a toy but rather a tool able to solve real tasks and lead businesses to success. We all should be more open-minded and should not stay in our Ivory Tower.
 
 Hire me to know more, support my book on Patreon, subscribe to me in Twitter, ask questions.
-* Patreon program: ["Functional Design And Architecture"](https://leanpub.com/functional-design-and-architecture)
+* Buy the book: ["Functional Design And Architecture"](https://leanpub.com/functional-design-and-architecture)
 * [My consultancy work](https://graninas.com/cv-contacts/)
 * GitHub: [graninas](https://github.com/graninas)
 * Twitter: [@graninas](https://twitter.com/graninas)
