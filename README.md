@@ -629,7 +629,8 @@ instance Logger AppM where
 This means you should create another "base monad" class for your testing environment, which is no longer the same as the live one:
 
 ```haskell
-newtype TestM a = IO a
+newtype TestM a = TestM (IO a)
+  deriving (MonadIO)
 
 instance Logger TestM where
   logInfo _ _ = pure ()
