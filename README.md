@@ -630,7 +630,7 @@ This means you should create another "base monad" class for your testing environ
 
 ```haskell
 newtype TestM a = TestM (IO a)
-  deriving (MonadIO)
+  deriving (Functor, Applicative, Monad, MonadIO)
 
 instance Logger TestM where
   logInfo _ _ = pure ()
