@@ -780,7 +780,7 @@ Here, the Church Encoded Free Monad engine is a bit slower than Final Tagless, b
 Now this is it. Hierarchical Free Monads is the most developed approach in Haskell because:
 
 * There is a whole book about this approach: ["Functional Design and Architecture"](https://leanpub.com/functional-design-and-architecture).
-* There are articles describing it in details:
+* There are articles describing it in detail:
   - This one;
   - [Automatic White-Box Testing With Free Monads](https://github.com/graninas/automatic-whitebox-testing-showcase)
   - [Building network actors with Node Framework](https://gist.github.com/graninas/9beb8df5d88dda5fa21c47ce9bcb0e16)
