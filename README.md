@@ -7,7 +7,7 @@ This article is for those who are searching for approaches in Haskell to create 
 
 There are also philosophical digressions in which I'm trying to explain why Haskell is not yet as popular as it can be, and why we need all that knowledge known as "Software Engineering" to make it more spread.
 
-This article is not for seasoned haskellers with a strong opinion and not for those people who consider Software Engineering to be something essentially bad. They may find I'm exaggerating and overbolizing too much but this is just the best illustration of how I feel.
+This article **is not for seasoned haskellers** with a strong opinion and not for those people who consider Software Engineering to be something essentially bad. **They may find I'm exaggerating and overbolizing too much** but this is just the best illustration of how I feel.
 
 ### Table of Contents
 
