@@ -83,7 +83,7 @@ You might ask, what else you can use for software design in Haskell if not Final
 To help with that, I collected a list of materials about Software Design in Haskell and composed a comparison table on these approaches. You can also check out my talks and presentations to get a better understanding on what I'll be talking about in the next sections. And for sure, you can read my book to ensure that the complete methodology of building software in Haskell now exists.
 
 * [Software Design in Haskell (list of materials)](https://github.com/graninas/software-design-in-haskell)
-* [Opinionaed comparison table of different approaches](https://gist.github.com/graninas/1b7961ccaedf7b5cb92417a1599fdc99)
+* [Opinionated comparison table of different approaches](https://gist.github.com/graninas/1b7961ccaedf7b5cb92417a1599fdc99)
 * [Functional Design and Architecture (book)](https://leanpub.com/functional-design-and-architecture)
 * [Hierarchical Free Monads and Software Design in Functional Programming (Talk)](https://youtu.be/3GKQ4ni2pS0) | [Slides](https://docs.google.com/presentation/d/1SYMIZ-LOI8Ylykz0PTxwiPuHN_02gIWh9AjJDO6xbvM/edit?usp=sharing) 
 * [Final Tagless vs Free Monad (Talk, Rus)](https://youtu.be/u1GGqDQyGfc) | [Slides (Eng)](https://drive.google.com/open?id=1VhS8ySgk2w5RoN_l_Ar_axcE4Dzf97zLw1uuzUJQbCo)
