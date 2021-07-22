@@ -53,9 +53,9 @@ Unfortunately, this delayed my Haskell career for several years. When I realized
 
 It became clear to me that there was the Boötes Void, The Great Nothing, the knowingly unlearnt lesson in the Haskell world. A terra incognita the community was ignoring completely. I'm not sure if it was a willful blindness or just a high focus on the more interesting academic stuff, but there was a stone, there was a mountain, and there was no person who could call himself Sisyphus.
 
-And I rolled up my sleeves. It was 2015 when I started my research of Software Engineering in Haskell, and in 2016 I wrote the first line for my future book ["Functional Design and Architecture"](https://leanpub.com/functional-design-and-architecture). A long path of reinventing engineery things in the FP setting was waiting for me ahead... To be honest, this wasn't an easy path because I placed myself into the opposition to the main dogmas of the community. It's not only the idea of having practices, patterns, methodologies and approaches was ["too simple"](https://www.simplehaskell.org/), ["juniorish"](https://www.parsonsmatt.org/2019/12/26/write_junior_code.html) and ["boring"](https://www.snoyman.com/blog/2019/11/boring-haskell-manifesto), but the very tool I found to achieve this - Free monads - has been already diminished and dogmated. I had to fight with the myths spread by influential articles from respected folks. But it was a pure luck for me because I managed to see what all others couldn't.
+And I rolled up my sleeves. It was 2015 when I started my research of Software Engineering in Haskell, and in 2016 I wrote the first line for my future book [Functional Design and Architecture](https://graninas.com/functional-design-and-architecture-book/). A long path of reinventing engineery things in the FP setting was waiting for me ahead... To be honest, this wasn't an easy path because I placed myself into the opposition to the main dogmas of the community. It's not only the idea of having practices, patterns, methodologies and approaches was ["too simple"](https://www.simplehaskell.org/), ["juniorish"](https://www.parsonsmatt.org/2019/12/26/write_junior_code.html) and ["boring"](https://www.snoyman.com/blog/2019/11/boring-haskell-manifesto), but the very tool I found to achieve this - Free monads - has been already diminished and dogmated. I had to fight with the myths spread by influential articles from respected folks. But it was a pure luck for me because I managed to see what all others couldn't.
 
-This is how I developed a methodology I call FDD, "Functional Declarative Design". I took the raw idea of Free Monads and showed how it's suitable for Software Design in Haskell. I found a way to work with Free monads easily without going too deep into theoretical concepts. I invented an approach I call Hierarchical Free Monads which is much better than other approaches in Haskell. I wrote a whole [book](https://leanpub.com/functional-design-and-architecture) about it, gave many [talks](https://graninas.com/talks-eng/) and proved Free Monads are fast, reliable, simple and expressive. I created several useful frameworks and technologies with Hierarchical Free Monads. I successfully tested this approach in production, many times.
+This is how I developed a methodology I call FDD, "Functional Declarative Design". I took the raw idea of Free Monads and showed how it's suitable for Software Design in Haskell. I found a way to work with Free monads easily without going too deep into theoretical concepts. I invented an approach I call Hierarchical Free Monads which is much better than other approaches in Haskell. I wrote a whole [book](https://graninas.com/functional-design-and-architecture-book/) about it, gave many [talks](https://graninas.com/talks-eng/) and proved Free Monads are fast, reliable, simple and expressive. I created several useful frameworks and technologies with Hierarchical Free Monads. I successfully tested this approach in production, many times.
 
 And today I can say: Hierarchical Free Monads is the most developed, documented and rewarding approach in Haskell nowadays.
 
@@ -84,7 +84,7 @@ To help with that, I collected a list of materials about Software Design in Hask
 
 * [Software Design in Haskell (list of materials)](https://github.com/graninas/software-design-in-haskell)
 * [Opinionated comparison table of different approaches](https://gist.github.com/graninas/1b7961ccaedf7b5cb92417a1599fdc99)
-* [Functional Design and Architecture (book)](https://leanpub.com/functional-design-and-architecture)
+* [Functional Design and Architecture (book)](https://graninas.com/functional-design-and-architecture-book/)
 * [Hierarchical Free Monads and Software Design in Functional Programming (Talk)](https://youtu.be/3GKQ4ni2pS0) | [Slides](https://docs.google.com/presentation/d/1SYMIZ-LOI8Ylykz0PTxwiPuHN_02gIWh9AjJDO6xbvM/edit?usp=sharing) 
 * [Final Tagless vs Free Monad (Talk, Rus)](https://youtu.be/u1GGqDQyGfc) | [Slides (Eng)](https://drive.google.com/open?id=1VhS8ySgk2w5RoN_l_Ar_axcE4Dzf97zLw1uuzUJQbCo)
 
@@ -780,7 +780,7 @@ Here, the Church Encoded Free Monad engine is a bit slower than Final Tagless, b
 
 Now this is it. Hierarchical Free Monads is the most developed approach in Haskell because:
 
-* There is a whole book about this approach: ["Functional Design and Architecture"](https://leanpub.com/functional-design-and-architecture).
+* There is a whole book about this approach: ["Functional Design and Architecture"](https://graninas.com/functional-design-and-architecture-book/).
 * There are articles describing it in detail:
   - This one;
   - [Automatic White-Box Testing With Free Monads](https://github.com/graninas/automatic-whitebox-testing-showcase)
@@ -807,7 +807,7 @@ But the industry is not interested in advanced Math concepts, it's not intereste
 
 Hire me to know more, support me, subscribe to me on Twitter, ask questions.
 
-* Buy the book: ["Functional Design And Architecture"](https://leanpub.com/functional-design-and-architecture)
+* Buy the book: ["Functional Design And Architecture"](https://graninas.com/functional-design-and-architecture-book/)
 * [My consultancy work](https://graninas.com/cv-contacts/)
 * GitHub: [graninas](https://github.com/graninas)
 * Twitter: [@graninas](https://twitter.com/graninas)
