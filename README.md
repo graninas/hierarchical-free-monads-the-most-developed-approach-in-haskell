@@ -807,7 +807,7 @@ But the industry is not interested in advanced Math concepts, it's not intereste
 
 Hire me to know more, support me, subscribe to me on Twitter, ask questions.
 
-* Buy the book: ["Functional Design And Architecture"](https://graninas.com/functional-design-and-architecture-book/)
+* Buy the book: [Functional Design And Architecture (Second Edition)](https://www.manning.com/books/functional-design-and-architecture)
 * [My consultancy work](https://graninas.com/cv-contacts/)
 * GitHub: [graninas](https://github.com/graninas)
 * Twitter: [@graninas](https://twitter.com/graninas)
